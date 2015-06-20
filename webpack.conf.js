@@ -9,12 +9,10 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.html$/, include: path.resolve(__dirname, './client'), loader: 'html' }
+      { test: /\.html$/, include: path.resolve(__dirname, './client'), loader: 'html' },
+      { test: /angular-grid/, loader: 'exports?name="angularGrid"'}
     ]
   },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
-  ],
   output: {
     filename: '[name].js',
     publicPath: '/js',
