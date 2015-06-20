@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "protractor ./e2e/protractor.conf.js"
   },
   "dependencies": {
     "body-parser": "1.9.2",
@@ -17,13 +18,15 @@
     "serve-favicon": "2.1.7"
   },
   "devDependencies": {
+    "cucumber": "^0.5.1",
     "grunt": "~0.4.0",
+    "grunt-contrib-concat": "*",
     "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-jshint": "*",
     "grunt-htmlhint": "*",
-    "matchdep": "*"
+    "matchdep": "*",
+    "protractor": "^2.1.0"
   }
 }
