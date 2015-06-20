@@ -50,3 +50,6 @@ To get assets ready for production:
 ```sh
 grunt production
 ```
+
+# Alternatively..
+You can use Vagrant to manage your MongoDB instance. There's a Vagrantfile in the base directory that will set up MongoDB on a virtual machine using `ubuntu/trusty32`. Just run `vagrant up`, then `vagrant ssh` to the box and start the mongodb instance using `mongod --bind_ip 127.0.0.1`. `bind_ip` is necessary as mongod by default binds to `0.0.0.0` which will cause the host machine to be unable to connect to the guest machine.

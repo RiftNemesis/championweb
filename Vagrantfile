@@ -8,6 +8,8 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty32"
   config.vm.network "forwarded_port", guest: 27017, host: 27017
+  # for mongodb web ui
+  config.vm.network "forwarded_port", guest: 28017, host: 28017
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
