@@ -14,8 +14,12 @@ function HeaderCtrl(navigatableStates) {
   // through it:
   // states: [ {label: string, name: string }]
   // update: { active: boolean, headline: string }
+  // donationUrl: string
   this.states = navigatableStates
   this.update = { active: true, headline: 'Badass Maintenance Occurring' }
+  this.donationUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=championgg%40outlook%2ecom&lc=AU&item_name=ChampionGG&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted'
+  this.championsAnalyzed = 0
+  this.patch = '5.12'
 }
 
 function getNavigatableStates($state) {

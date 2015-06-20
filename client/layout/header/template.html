@@ -25,5 +25,48 @@
       </span>
     </div>
   </div>
-
+  <div class='navbar navbar-inverse' role='navigation'>
+    <div class='container-fluid'>
+      <div class='row clearfix'>
+        <div class='logo-holder'>
+        <a class='navbar-brand' href='/'>
+          <img src='/img/logo.png'>
+        </a>
+      </div>
+      <!-- search -->
+      <!-- TODO: Turn this into a directive -->
+      <div class='search-holder'>
+        <div class='search-fb-holder'>
+          <div class='input-group'>
+            <input type='text' 
+              class='form-control' 
+              placeholder='Champion Name' 
+              id='query'
+              style="width:188px;display: inline-block;"
+              autocomplete='off'>
+            <div class='input-group-btn' style="cursor:auto;display: inline-block;">
+              <button type='submit' class='btn btn-success'>
+                <i style="cursor:auto;" class='glyphicon glyphicon-search'></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='navigation-holder clearfix'>
+        <a class="donate" ng-href='nav.donationUrl' alt="donate">Donate</a>
+        <!-- TODO: Turn into dl -->
+        <div class='analysis-holder'>
+          <small>
+            Patch 
+            <strong ng-bind='nav.patch'></strong>
+            <span class='spacer'>|</span>
+            Champions Analyzed
+            <strong ng-bind='nav.championsAnalyzed'></strong>
+            <span class='spacer'>|</span>
+            <strong>Platinum+ Ranked</strong>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
