@@ -7,6 +7,11 @@ module.exports = {
     master: './client/app.js',
     vendor: ['angular', 'angular-bootstrap']
   },
+  module: {
+    loaders: [
+      { test: /\.html$/, include: path.resolve(__dirname, './client'), loader: 'html' }
+    ]
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
   ],
