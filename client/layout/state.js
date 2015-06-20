@@ -3,5 +3,15 @@
 module.exports = {
   name: 'layout',
   abstract: true,
-  template: require('./template.html')
+  views: {
+    '': {
+      template: require('./template.html')
+    },
+    header: {
+      template: require('./header.html')
+    },
+    footer: {
+      template: require('./footer.html')
+    }
+  }
 }
