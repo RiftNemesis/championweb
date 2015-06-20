@@ -15,7 +15,7 @@ var champion = require('./routes/champion');
 var matchup = require('./routes/matchup');
 var matchupJson = require('./routes/matchup_json');
 var apiStatic = require('./routes/api_static');
-var statistics = require('./routes/statistics');
+var statistics = require('./statistics/middleware');
 var faq = require('./routes/faq');
 var index = require('./routes/index');
 
@@ -49,15 +49,14 @@ app.use(function(req, res, next){
 });
 
 app.use(overallData);
-
 app.use('/champion', champion);
 app.use('/matchup', matchup);
 app.use('/matchupJson', matchupJson);
 app.use('/static', apiStatic);
-
-app.use('/statistics', statistics);
 app.use('/faq', faq);
 app.use('/', index);
+
+app.use('/api/statistics', statistics())
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

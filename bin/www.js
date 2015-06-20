@@ -3,7 +3,7 @@
 var debug = require('debug')('champion.gg');
 var app = require('../server/app');
 var db = require('../server/db');
-var port = process.env.PORT || 80
+var port = process.env.PORT || 3000
 
 db(function() {
   app.listen(port, function() {
