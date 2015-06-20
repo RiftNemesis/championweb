@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
             summaries: summaries,
             data: champData,
             pageData: {
-                appName: 'core',
+                appName: 'championgg.core',
                 name: 'home',
                 title: 'LoL Champion Stats, Builds, Runes, Masteries, Counters and Matchups!',
                 description:'Champion.gg provides League of Legends champion statistics, builds, runes, masteries, skill orders and counters by role - including Win Rate, Ban Rate, Play Rate and much more!' 
