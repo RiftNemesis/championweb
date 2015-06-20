@@ -1,8 +1,13 @@
+var webpackConfiguration = require('./webpack.conf.js')
+
 module.exports = function(grunt){
 	"use strict";
 	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
+    webpack: {
+      main: webpackConfiguration
+    },
 		watch: {
 			js: {
 				files: [
@@ -60,7 +65,7 @@ module.exports = function(grunt){
     uglify: {
 			build:  {
 		    files: {
-	      	'public/js/master.min.js': 'public/js/master.min.js'
+	      	'public/js/master.min.js': 'public/js/master.js'
 		    }
 			}
 		},
@@ -72,6 +77,6 @@ module.exports = function(grunt){
   	}
   });
 	
-	grunt.registerTask('production', ['concat', 'uglify','cssmin']);
+	grunt.registerTask('production', ['webpack', 'uglify', 'cssmin']);
 	grunt.registerTask('default', []);
 };
