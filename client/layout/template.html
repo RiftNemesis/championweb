@@ -1,7 +1,9 @@
 <div class='primary-hue'>
   <div class='main-container'>
     <div ui-view='header@'></div>
-    <div ui-view='body'></div>
+    <div class='page-content'>
+      <div ui-view='body'></div>
+    </div>
   </div>
   <div ui-view='footer@'></div>
 </div>
