@@ -14,5 +14,13 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/js',
     path: path.resolve(__dirname, './public/js/')
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, './public'),
+    historyApiFallback: true,
+    proxy: {
+      // proxy all requests to the base champion.gg server
+      '/api': 'http://localhost:80'
+    }
   }
 }
