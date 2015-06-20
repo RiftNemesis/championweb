@@ -15,22 +15,22 @@ module.exports = {
       controller: StatisticsController,
       controllerAs: 'statistics',
       resolve: {
-        champions: ['Champion', function(Champion) {
-          return Champion.all()
+        statistics: ['Statistics', function(Statistics) {
+          return Statistics.get()
         }]
       }
     }
   }
 }
 
-function StatisticsController(roles, gridHeaders, champions) {
+function StatisticsController(roles, gridHeaders, statistics) {
   // roles: [ { role.name, role.label }]
   // role = { role.name, role.label }
-  // champions = [ { header }]
+  // statistics = [ { header }]
   this.roles = roles
   this.role = this.roles[0]
   this.headers = gridHeaders
-  this.champions = champions
+  this.statistics = statistics
 }
 
 StatisticsController.prototype.chosenRole = function chosenRole() {

@@ -9,4 +9,3 @@ angular.module('championgg', [bootstrap.name, tooltip.name])
   .config(['$locationProvider', function($locationProvider) {
     $locationProvider.html5Mode(true)
   }])
-  .service('Champion', require('./data/champions'))
