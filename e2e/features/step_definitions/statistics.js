@@ -24,7 +24,7 @@ function statisticsStepDefinitions() {
   this.Then(/^the grid should have the column '(.*)'$/, function (columnName, callback) {
     // Currently implemented by having <td><span>name</span></td> unfortunately this appears to be done on the server side (i.e not bound)
     // Actually it's hard coded, holy crap
-    var elementsWithColumnName = element.all(by.css('.table.table-striped thead td span')).filter(elementHasColumnName(columnName))
+    var elementsWithColumnName = element.all(by.css('.table.table-striped thead th')).filter(elementHasColumnName(columnName))
     elementsWithColumnName.count().then(function(count) {
       assert.equal(count, 1)
       callback()
