@@ -10,6 +10,39 @@
   <!-- TODO: Remove inline styling -->
   <h2 style="margin-top: 35px; margin-bottom: -5px;">Current Patch Statistics</h2>
   <div class='row' id='stats'>
-    <div ag-grid='statistics.gridOptions' class='ag-fresh'></div>
+    <div class='search-sorter' style='display:inline-block;'>
+      <input class='matchupSearch'
+        type='text'
+        ng-model='statistics.searchTitle'
+        ng-change='statistics.searchUrl()'
+        ng-model-options='{debounce:40}'
+        style='margin-left: -22px'
+        placeholder='Filter by Name'>
+    </div>
+    <div style='display:inline-block'>
+      Sort Role
+      <select class='minimum-games' 
+        style='padding:5px' 
+        ng-model='statistics.role'
+        ng-change='statistics.roleChanged()'
+        ng-options='role.label for role in statistics.roles'>
+      </select>
+    </div>
   </div>
+
+  <!-- TODO: Replace with Grid solution ie ui-grid -->
+  <table class='table table-striped' id='table-1' style='table-layout: auto;'>
+    <thead>
+      <tr>
+        <th ng-repeat='header in statistics.headers' ng-bind='header.label'>
+          
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='champion in statistics.champions'>
+        <th ng-repeat='header in statistics.headers' ng-bind='champion[header.field]'></th>
+      </tr>
+    </tbody>
+  </table>
 </div>

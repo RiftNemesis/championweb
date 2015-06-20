@@ -10,3 +10,5 @@ module.exports = angular.module('championgg.tooltip', [uiRouter, layout.name])
   .config(['$stateProvider', function($stateProvider) {
     $stateProvider.state(state)
   }])
+  .constant('gridHeaders', require('./gridHeaders'))
+  .constant('roles', require('./roles'))
