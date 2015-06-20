@@ -13,7 +13,7 @@ Feature: Statistics
       And the grid should have the column 'Win Percent'
       And the grid should have the column 'Play Percent'
       And the grid should have the column 'Ban Rate'
-      And the grid should have the column 'Playerbase Average Games'
+      And the grid should have the column 'Playerbase Avg. Games'
       And the grid should have the column 'Kills'
       And the grid should have the column 'Deaths'
       And the grid should have the column 'Assists'
