@@ -1,14 +1,29 @@
-<h1>Header</h1>
-<div class='primary-hue'>
-  <div class='main-container'>
-    <div class='navigation-elem'>
-      <div class='inner-nav clearfix'>
-        <ul class='nav navbar-nav'>
-          <li ng-repeat='state in nav.states'>
-            <a ui-sref='{{ state.name }}' ui-sref-active='active' ng-bind='state.label'></a>
-          </li>
-        </ul>
+<div class='navigation-elem'>
+  <div class='inner-nav clearfix'>
+    <ul class='nav navbar-nav'>
+      <li ng-repeat='state in nav.states'>
+        <a ui-sref='{{ state.name }}' ui-sref-active='active' ng-bind='state.label'></a>
+      </li>
+    </ul>
+    <div class='social-media'>
+      <a href='https://twitter.com/share' 
+        class='twitter-share-button' 
+        data-via='champion_gg'>Tweet</a>
+
+      <div class='fb-like' 
+        data-href='https://www.facebook.com/championgg'
+        data-layout='button_count' 
+        data-action='like' 
+        data-show-faces='false' 
+        data-share='false'>
       </div>
     </div>
+    <div class='update-happening'>
+      <span ng-if='nav.update.active' 
+        class='important-message'
+        ng-bind='nav.update.headline'>
+      </span>
+    </div>
   </div>
+
 </div>

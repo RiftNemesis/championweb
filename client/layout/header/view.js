@@ -10,7 +10,12 @@ module.exports = {
 }
 
 function HeaderCtrl(navigatableStates) {
+  // The fields that the view listens to, in case you don't want to trawl
+  // through it:
+  // states: [ {label: string, name: string }]
+  // update: { active: boolean, headline: string }
   this.states = navigatableStates
+  this.update = { active: true, headline: 'Badass Maintenance Occurring' }
 }
 
 function getNavigatableStates($state) {
