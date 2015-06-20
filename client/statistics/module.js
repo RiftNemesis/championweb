@@ -5,3 +5,8 @@ var angular = require('angular')
 var uiRouter = require('angular-ui-router')
 
 module.exports = angular.module('championgg.tooltip', [uiRouter])
+  .config(['$stateProvider', function($stateProvider) {
+    $stateProvider.state('statistics', {
+      url: '/statistics'
+    })
+  }])
