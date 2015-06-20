@@ -7,6 +7,8 @@
     "test": "protractor ./e2e/protractor.conf.js"
   },
   "dependencies": {
+    "angular": "^1.4.1",
+    "angular-bootstrap": "^0.12.0",
     "body-parser": "1.9.2",
     "compression": "1.2.0",
     "debug": "2.1.0 ",
@@ -28,6 +30,7 @@
     "grunt-htmlhint": "*",
     "matchdep": "*",
     "protractor": "^2.1.0",
-    "ramda": "^0.15.0"
+    "ramda": "^0.15.0",
+    "webpack": "^1.9.11"
   }
 }
