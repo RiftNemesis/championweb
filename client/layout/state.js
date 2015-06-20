@@ -8,8 +8,6 @@ module.exports = {
       template: require('./template.html')
     },
     header: require('./header/view'),
-    footer: {
-      template: require('./footer.html')
-    }
+    footer: require('./footer/view') 
   }
 }
