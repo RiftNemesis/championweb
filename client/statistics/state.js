@@ -5,6 +5,10 @@ module.exports = {
   parent: layoutState.name,
   name: 'statistics',
   url: '/statistics',
+  data: {
+    displayInNav: true,
+    navLabel: 'Statistics'
+  },
   views: {
     body: {
       template: require('./template.html')

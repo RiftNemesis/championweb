@@ -5,10 +5,10 @@
       <div class='inner-nav clearfix'>
         <ul class='nav navbar-nav'>
           <li ng-repeat='state in nav.states'>
-            <a ui-sref='{{ state.name }}' ui-sref-active='active'>
-          </a>
-        </li>
-      </ul>
+            <a ui-sref='{{ state.name }}' ui-sref-active='active' ng-bind='state.label'></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

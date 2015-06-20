@@ -15,7 +15,11 @@ function HeaderCtrl(navigatableStates) {
 
 function getNavigatableStates($state) {
   var stateList = $state.get()
-  return stateList.filter(function(state) {
-    return state.data && state.data.navigatable
-  })
-}
+  return stateList
+    .filter(function(state) {
+      return state.data && state.data.displayInNav
+    })
+    .map(function(state) {
+      return { label: state.data.navLabel, name: state.name }
+    })
+  }
