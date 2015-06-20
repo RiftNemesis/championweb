@@ -7,9 +7,7 @@ module.exports = {
     '': {
       template: require('./template.html')
     },
-    header: {
-      template: require('./header.html')
-    },
+    header: require('./header/view'),
     footer: {
       template: require('./footer.html')
     }
