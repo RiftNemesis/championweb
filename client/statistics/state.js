@@ -11,7 +11,13 @@ module.exports = {
   },
   views: {
     body: {
-      template: require('./template.html')
+      template: require('./template.html'),
+      controller: StatisticsController,
+      controllerAs: 'statistics'
     }
   }
+}
+
+function StatisticsController() {
+  
 }
